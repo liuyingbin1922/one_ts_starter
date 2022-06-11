@@ -1,0 +1,25 @@
+{
+  "name": "one_ts_starter",
+  "version": "1.0.0",
+  "description": "ts starter model",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:main": "tsc -p tsconfig.json",
+    "build:module": "tsc -p tsconfig.module.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyingbin1922/one_ts_starter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liuyingbin1922/one_ts_starter/issues"
+  },
+  "homepage": "https://github.com/liuyingbin1922/one_ts_starter#readme",
+  "dependencies": {
+    "typescript": "^4.7.3"
+  }
+}
