@@ -12,7 +12,11 @@
     "doc": "run-s doc:html && open-cli build/docs/index.html",
     "doc:html": "typedoc src/ --out build/docs",
     "doc:json": "typedoc src/ --target ES6 --mode file --json build/docs/typedoc.json",
-    "doc:publish": "gh-pages -m \"[ci skip] Updates\" -d build/docs"
+    "doc:publish": "gh-pages -m \"[ci skip] Updates\" -d build/docs",
+    "fix": "run-s fix:*",
+    "fix:prettier": "prettier \"src/**/*.ts\" --write",
+    "fix:lint": "eslint src --ext .ts --fix",
+    "watch:test": "nyc --silent ava --watch"
   },
   "repository": {
     "type": "git",
@@ -26,7 +30,17 @@
   },
   "homepage": "https://github.com/liuyingbin1922/one_ts_starter#readme",
   "dependencies": {
+    "ava": "^4.3.0",
+    "nyc": "^15.1.0",
     "typedoc": "^0.22.17",
     "typescript": "^4.7.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "eslint": "^8.17.0",
+    "eslint-plugin-react": "^7.30.0",
+    "gh-pages": "^4.0.0",
+    "prettier": "^2.6.2"
   }
 }
